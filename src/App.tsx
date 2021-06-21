@@ -24,7 +24,7 @@ function App(props: RouteComponentProps) {
             {/* <Router {...props}></Router> */}
             <Switch>
                 <Route component={Login} path={RouteName.Login} exact/>
-                <Route component={Router} path="/" />
+                <Route component={Router} path={RouteName.Index} />
             </Switch>
         </div>
     )
