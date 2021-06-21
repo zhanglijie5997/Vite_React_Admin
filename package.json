@@ -3,6 +3,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:uat": "npm run build && node aliOss.js",
+    "put:pro": "node aliOss.js",
+    "build:pro": "npm run build && node aliOss.js",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -11,6 +14,7 @@
     "@types/redux": "^3.6.0",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@vitejs/plugin-legacy": "^1.4.1",
+    "ali-oss": "^6.15.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.29.0",
     "eslint-plugin-import": "^2.23.4",
