@@ -30,7 +30,7 @@ const Router = () => {
                             <Link to={RouteName.User}>用户</Link>
                         </Menu.Item>
                         <Menu.Item key="3" icon={<UploadOutlined />}>
-                        nav 3
+                            nav3
                         </Menu.Item>
                     </Menu>
                 </Sider>
@@ -38,11 +38,7 @@ const Router = () => {
                     <Header className="site-layout-background" style={{ padding: 0 }}>
                         {React.createElement(
                         collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-                        {
-                            className: 'trigger',
-                            onClick: toggle,
-                        },
-                        )}
+                        { className: 'trigger', onClick: toggle, })}
                     </Header>
                 <Content
                     className="site-layout-background"

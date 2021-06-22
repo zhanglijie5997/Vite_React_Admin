@@ -1,6 +1,7 @@
 /*** @type {import('rollup-plugin-eslint')} */
 module.exports = {
     // "parser": "@typescript-eslint/parser",
+    'root': true,
     'env': {
         'browser': true,
         'es6': true,
@@ -16,6 +17,7 @@ module.exports = {
         '@typescript-eslint/eslint-plugin',
         'prettier',
         'import',
+        'html'
     ],
     'parserOptions': {
         'project': 'tsconfig.json',
