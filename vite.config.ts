@@ -23,6 +23,7 @@ export default defineConfig({
             '@components': path.resolve(__dirname, 'src/components'),
             '@http': path.resolve(__dirname, 'src/http'),
             '@hook': path.resolve(__dirname, 'src/hook'),
+            '@i18n': path.resolve(__dirname, 'src/i18n'),
         },
     },
     esbuild: {

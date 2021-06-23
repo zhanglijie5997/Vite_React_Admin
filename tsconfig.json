@@ -25,6 +25,8 @@
             "@components": ["./src/components/*"],
             "@http": ["./src/http/*"],
             "@hook": ["./src/hook/*"],
+            "@i18n": ["./src/i18n/*"],
+
         }
     },
     "include": ["src"]
