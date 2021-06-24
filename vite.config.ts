@@ -3,6 +3,7 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 import path from 'path';
 import gzip from 'rollup-plugin-gzip';
 import legacy from '@vitejs/plugin-legacy';
+import ViteImportPlugin from 'vite-plugin-import';
 // import { eslint } from 'rollup-plugin-eslint'
 // import { eslint } from 'rollup-plugin-eslint';
 // https://vitejs.dev/config/
@@ -12,6 +13,16 @@ export default defineConfig({
         reactRefresh(),
         gzip(),
         legacy(),
+        ViteImportPlugin({
+            onlyBuild: false,
+            babelImportPluginOptions: [
+              {
+                libraryName: 'antd',
+                libraryDirectory: 'es',
+                style: 'css',
+              },
+            ],
+          })
     ],
     resolve: {
         alias: {
@@ -33,6 +44,13 @@ export default defineConfig({
         preprocessorOptions: {
             scss: {
                 // additionalData: `@import "./src/static/css/global.scss";`
+            },
+            less: {
+                modifyVars: {
+                    // 初始化可直接覆盖变量
+                    '@error-color': '#1890FF',
+                },
+                javascriptEnabled: true
             }
         },
         modules: {

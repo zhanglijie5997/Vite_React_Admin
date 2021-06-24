@@ -2,7 +2,7 @@
 :root {
     --color:red;
 }
-@primary-color: #1890ff; // 全局主色
+@primary-color: red; // 全局主色
 @link-color: #1890ff; // 链接色
 @success-color: #52c41a; // 成功色
 @warning-color: #faad14; // 警告色
@@ -16,8 +16,6 @@
 @border-color-base: #d9d9d9; // 边框色
 @box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
 0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
-
-
 
 .flex_space_between {
   display: flex;
@@ -88,4 +86,16 @@
     font-size: 16px;
 }
 
+.circle {
+    min-width: 10px;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    border: 1px solid red;
+    transition: 3s ease;
+    overflow: hidden;
+}
 
+.circle:hover {
+    width: 200px;
+}

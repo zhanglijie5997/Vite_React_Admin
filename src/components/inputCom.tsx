@@ -1,30 +1,36 @@
-import React, { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import context from '@page/index/context/context';
+
+import React, { forwardRef, useContext, useEffect, 
+                useImperativeHandle, useRef } from 'react';
 
 export interface InputRef {
-    focus: () => void
+    focus: () => void,
+    text: string
 }
 
 interface InputComProps {
-    a: number
+    a: number,
+    _setText: (e: string) => void
 }
 
 const inputCom = (props: InputComProps, ref: React.Ref<any> | undefined) => {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const _num = useRef(2);
+    const _ctx = useContext(context);
 
     useEffect(() => {
-        _num.current = 3;
-    }, [_num])
+        console.log(_ctx);
+    }, [_ctx])
 
     useImperativeHandle(ref, () => ({
-        focus: () => inputRef.current?.focus()
+        focus: () => inputRef.current?.focus(),
+        text: inputRef.current?.value
     }));
 
     return (
         <div>
-            <input type="text" ref={inputRef}/>
+            <input type="text" ref={inputRef} onChange={e => props._setText(e.currentTarget.value)}/>
         </div>
     );
 }

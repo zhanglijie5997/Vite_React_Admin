@@ -36,7 +36,8 @@
     "redux-thunk": "^2.3.0",
     "rollup-plugin-gzip": "^2.5.0",
     "sass": "^1.35.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "vite-plugin-import": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "^15.12.4",
